@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+
+{% extends "landing.html" %}
+
+<html lang="en">
+
+{% block head %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Data Entry</title>
+
+    <!-- Font Icon -->
+    <link rel="stylesheet" href="fonts/material-icon/css/material-design-iconic-font.min.css">
+
+    <!-- Main css -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='../static/login_pages/css/style.css') }}">
+
+    <style>
+        body {
+            background-color: black;
+        }
+    </style>
+    
+{% endblock %}
+
+{% block body %}
+
+    <div class="main" style="background-color: black;"></div>
+
+        <!-- Sign up form -->
+        <section class="signup">
+            <div class="container">
+                <div class="signup-content">
+                    <div class="signup-form">
+                        <h2 class="form-title">Data Entry</h2>
+                        <form method="POST" class="register-form" id="register-form">
+                            <div class="form-group">
+                                <label for="N-value"><i class="zmdi zmdi-account material-icons-name"></i></label>
+                                <input type="number" name="N-value" id="N-value" placeholder="N Value"/>
+                            </div>
+                            <div class="form-group">
+                                <label for="P-value"><i class="zmdi zmdi-account material-icons-name"></i></label>
+                                <input type="number" name="P-value" id="P-value" placeholder="P Value"/>
+                            </div>
+                            <div class="form-group">
+                                <label for="K-value"><i class="zmdi zmdi-account material-icons-name"></i></label>
+                                <input type="number" name="K-value" id="K-value" placeholder="K Value"/>
+                            </div>
+                            <div class="form-group">
+                                <label for="temp"><i class="zmdi zmdi-account material-icons-name"></i></label>
+                                <input type="number" name="temp" id="temp" placeholder="Temperature"/>
+                            </div>
+                            <div class="form-group">
+                                <label for="humidity"><i class="zmdi zmdi-account material-icons-name"></i></label>
+                                <input type="number" name="humidity" id="humidity" placeholder="Humidity"/>
+                            </div>
+                            <div class="form-group">
+                                <label for="pH"><i class="zmdi zmdi-account material-icons-name"></i></label>
+                                <input type="number" name="pH" id="pH" placeholder="pH Value"/>
+                            </div>
+                            <div class="form-group">
+                                <label for="rainfall"><i class="zmdi zmdi-account material-icons-name"></i></label>
+                                <input type="number" name="rainfall" id="rainfall" placeholder="Rainfall (in mm)"/>
+                            </div>
+                            <div class="form-group">
+                                <label for="crop"><i class="zmdi zmdi-account material-icons-name"></i></label>
+                                <select name="crop" id="crop">
+                                <option value="">Choose Crop</option>
+                                <option value="rice">Rice</option>
+                                <option value="maize">Maize</option>
+                                <option value="jute">Jute</option>
+                                <option value="cotton">Cotton</option>
+                                <option value="coconut">Coconut</option>
+                                <option value="papaya">Papaya</option>
+                                <option value="orange">Orange</option>
+                                <option value="apple">Apple</option>
+                                <option value="muskmelon">Muskmelon</option>
+                                <option value="watermelon">Watermelon</option>
+                                <option value="grapes">Grapes</option>
+                                <option value="mango">Mango</option>
+                                <option value="banana">Banana</option>
+                                <option value="pomegranate">Pomogranate</option>
+                                <option value="lentil">Lentil</option>
+                                <option value="blackgram">Blackgram</option>
+                                <option value="mungbean">Mungbean</option>
+                                <option value="mothbeans">Mothbeans</option>
+                                <option value="pigeonpeas">Pigeonpeas</option>
+                                <option value="kidneybeans">Kidneybeans</option>
+                                <option value="chickpea">Chickpea</option>
+                                <option value="coffee">Coffee</option>
+                                </select>
+                            </div>
+                            <div class="form-group form-button">
+                                <input type="submit" name="signup" id="signup" class="form-submit" value="Submit"/>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="signup-image">
+                        <figure><img src="../static/login_pages/images/safal-phasal.jpeg" alt="sing up image"></figure>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- JS -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+{% endblock %}
+</html>
