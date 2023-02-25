@@ -6,3 +6,4 @@ Remaining tasks:
 2. Integration @shubha
 3. Query generator @me
 4. Finish prediction model - almost done @me
+5. Add SVG elements to backgrounds @dhuni
