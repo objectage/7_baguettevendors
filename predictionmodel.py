@@ -115,11 +115,34 @@ def summary(crops = list(data['label'].value_counts().index)):
     print("avg: {0:.2f}".format(x['rainfall'].mean()))
     print("max: {0:.2f}".format(x['rainfall'].max()))
 
-# In[8]:
+rice={'N':{'min':60,'avg':79.80,'max':99},'P':{'min':35,'avg':47.58,'max':60},'K':{'min':35,'avg':39.87,'max':45},'temp':{'min':20.05,'avg':23.69,'max':36.93},'hum':{'min':80.12,'avg':82.27,'max':84.47},'ph':{'min':5.01,'avg':6.43,'max':7.87},'rain':{'min':182.56,'avg':236.18,'max':298.56}}
+maize={'N':{'min'60:,'avg':77.76,'max':100},'P':{'min':35,'avg':48.44,'max':60},'K':{'min':15,'avg':19.79,'max':25},'temp':{'min':18.04,'avg':22.39,'max':26.55},'hum':{'min':55.28,'avg':65.09,'max':74.83},'ph':{'min':5.51,'avg':6.25,'max':7.00},'rain':{'min':60.65,'avg':84.77,'max':109.75}}
+jute={'N':{'min':60,'avg':78.4,'max':100},'P':{'min':35,'avg':46.86,'max':60},'K':{'min':35,'avg':39.99,'max':45},'temp':{'min':23.09,'avg':24.96,'max':26.99},'hum':{'min':70.88,'avg':79.64,'max':89.89},'ph':{'min':6.00,'avg':6.73,'max':},'rain':{'min':,'avg':,'max':}}
+cotton={'N':{'min':,'avg':,'max':},'P':{'min':,'avg':,'max':},'K':{'min':,'avg':,'max':},'temp':{'min':,'avg':,'max':},'hum':{'min':,'avg':,'max':},'ph':{'min':,'avg':,'max':},'rain':{'min':,'avg':,'max':}}
+coconut={'N':{'min':,'avg':,'max':},'P':{'min':,'avg':,'max':},'K':{'min':,'avg':,'max':},'temp':{'min':,'avg':,'max':},'hum':{'min':,'avg':,'max':},'ph':{'min':,'avg':,'max':},'rain':{'min':,'avg':,'max':}}
+papaya={'N':{'min':,'avg':,'max':},'P':{'min':,'avg':,'max':},'K':{'min':,'avg':,'max':},'temp':{'min':,'avg':,'max':},'hum':{'min':,'avg':,'max':},'ph':{'min':,'avg':,'max':},'rain':{'min':,'avg':,'max':}}
+orange={'N':{'min':,'avg':,'max':},'P':{'min':,'avg':,'max':},'K':{'min':,'avg':,'max':},'temp':{'min':,'avg':,'max':},'hum':{'min':,'avg':,'max':},'ph':{'min':,'avg':,'max':},'rain':{'min':,'avg':,'max':}}
+apple={'N':{'min':,'avg':,'max':},'P':{'min':,'avg':,'max':},'K':{'min':,'avg':,'max':},'temp':{'min':,'avg':,'max':},'hum':{'min':,'avg':,'max':},'ph':{'min':,'avg':,'max':},'rain':{'min':,'avg':,'max':}}
+muskmelon={'N':{'min':,'avg':,'max':},'P':{'min':,'avg':,'max':},'K':{'min':,'avg':,'max':},'temp':{'min':,'avg':,'max':},'hum':{'min':,'avg':,'max':},'ph':{'min':,'avg':,'max':},'rain':{'min':,'avg':,'max':}}
+watermelon={'N':{'min':,'avg':,'max':},'P':{'min':,'avg':,'max':},'K':{'min':,'avg':,'max':},'temp':{'min':,'avg':,'max':},'hum':{'min':,'avg':,'max':},'ph':{'min':,'avg':,'max':},'rain':{'min':,'avg':,'max':}}
+grapes={'N':{'min':,'avg':,'max':},'P':{'min':,'avg':,'max':},'K':{'min':,'avg':,'max':},'temp':{'min':,'avg':,'max':},'hum':{'min':,'avg':,'max':},'ph':{'min':,'avg':,'max':},'rain':{'min':,'avg':,'max':}}
+mango={'N':{'min':,'avg':,'max':},'P':{'min':,'avg':,'max':},'K':{'min':,'avg':,'max':},'temp':{'min':,'avg':,'max':},'hum':{'min':,'avg':,'max':},'ph':{'min':,'avg':,'max':},'rain':{'min':,'avg':,'max':}}
+banana={'N':{'min':,'avg':,'max':},'P':{'min':,'avg':,'max':},'K':{'min':,'avg':,'max':},'temp':{'min':,'avg':,'max':},'hum':{'min':,'avg':,'max':},'ph':{'min':,'avg':,'max':},'rain':{'min':,'avg':,'max':}}
+pomegranate={'N':{'min':,'avg':,'max':},'P':{'min':,'avg':,'max':},'K':{'min':,'avg':,'max':},'temp':{'min':,'avg':,'max':},'hum':{'min':,'avg':,'max':},'ph':{'min':,'avg':,'max':},'rain':{'min':,'avg':,'max':}}
+lentil={'N':{'min':,'avg':,'max':},'P':{'min':,'avg':,'max':},'K':{'min':,'avg':,'max':},'temp':{'min':,'avg':,'max':},'hum':{'min':,'avg':,'max':},'ph':{'min':,'avg':,'max':},'rain':{'min':,'avg':,'max':}}
+blackgram={'N':{'min':,'avg':,'max':},'P':{'min':,'avg':,'max':},'K':{'min':,'avg':,'max':},'temp':{'min':,'avg':,'max':},'hum':{'min':,'avg':,'max':},'ph':{'min':,'avg':,'max':},'rain':{'min':,'avg':,'max':}}
+mungbean={'N':{'min':,'avg':,'max':},'P':{'min':,'avg':,'max':},'K':{'min':,'avg':,'max':},'temp':{'min':,'avg':,'max':},'hum':{'min':,'avg':,'max':},'ph':{'min':,'avg':,'max':},'rain':{'min':,'avg':,'max':}}
+mothbeans={'N':{'min':,'avg':,'max':},'P':{'min':,'avg':,'max':},'K':{'min':,'avg':,'max':},'temp':{'min':,'avg':,'max':},'hum':{'min':,'avg':,'max':},'ph':{'min':,'avg':,'max':},'rain':{'min':,'avg':,'max':}}
+pigeonpeas={'N':{'min':,'avg':,'max':},'P':{'min':,'avg':,'max':},'K':{'min':,'avg':,'max':},'temp':{'min':,'avg':,'max':},'hum':{'min':,'avg':,'max':},'ph':{'min':,'avg':,'max':},'rain':{'min':,'avg':,'max':}}
+kidneybeans={'N':{'min':,'avg':,'max':},'P':{'min':,'avg':,'max':},'K':{'min':,'avg':,'max':},'temp':{'min':,'avg':,'max':},'hum':{'min':,'avg':,'max':},'ph':{'min':,'avg':,'max':},'rain':{'min':,'avg':,'max':}}
+chickpea={'N':{'min':,'avg':,'max':},'P':{'min':,'avg':,'max':},'K':{'min':,'avg':,'max':},'temp':{'min':,'avg':,'max':},'hum':{'min':,'avg':,'max':},'ph':{'min':,'avg':,'max':},'rain':{'min':,'avg':,'max':}}
+coffee={'N':{'min':,'avg':,'max':},'P':{'min':,'avg':,'max':},'K':{'min':,'avg':,'max':},'temp':{'min':,'avg':,'max':},'hum':{'min':,'avg':,'max':},'ph':{'min':,'avg':,'max':},'rain':{'min':,'avg':,'max':}}
+# In[7]:
 
 
 ## the Average Requirement for each crops with average conditions
 
+@interact
 def compare(conditions = ['N','P','K','temperature','ph','humidity','rainfall']):
     print("Average Value for", conditions,"is {0:.2f}".format(data[conditions].mean()))
     print("----------------------------------------------")
@@ -147,10 +170,10 @@ def compare(conditions = ['N','P','K','temperature','ph','humidity','rainfall'])
     print("Coffee : {0:.2f}".format(data[data['label'] == 'coffee'][conditions].mean()))
 
 
-# In[9]:
+# In[8]:
 
 
-
+@interact
 def compare(conditions = ['N','P','K','temperature','ph','humidity','rainfall']):
     print("Crops which require greater than average", conditions,'\n')
     print(data[data[conditions] > data[conditions].mean()]['label'].unique())
@@ -161,7 +184,7 @@ def compare(conditions = ['N','P','K','temperature','ph','humidity','rainfall'])
 
 # ### Analyzing Agricultural Conditions
 
-# In[10]:
+# In[9]:
 
 
 x=data['N'].tolist()
@@ -173,7 +196,7 @@ plt.plot(x,yp)
 plt.show()
 
 
-# In[11]:
+# In[10]:
 
 
 x=data['P'].tolist()
@@ -185,7 +208,7 @@ plt.plot(x,yp)
 plt.show()
 
 
-# In[12]:
+# In[11]:
 
 
 x=data['K'].tolist()
@@ -197,7 +220,7 @@ plt.plot(x,yp)
 plt.show()
 
 
-# In[13]:
+# In[12]:
 
 
 x = data['ph'].tolist()
@@ -211,7 +234,7 @@ plt.xlabel('pH')
 plt.ylabel('Probabilty')
 
 
-# In[14]:
+# In[13]:
 
 
 #distribution of Agricultural Conditions :
@@ -257,7 +280,7 @@ plt.suptitle('Distribution for Agricultural Conditions', fontsize = 20)
 plt.show()
 
 
-# In[15]:
+# In[14]:
 
 
 print("Crops - High Ratio of Nitrogen Content in Soil:", data[data['N'] > 120]['label'].unique())
@@ -271,7 +294,7 @@ print("Crops - Low pH:", data[data['ph'] < 4]['label'].unique())
 print("Crops - High pH:", data[data['ph'] > 9]['label'].unique())
 
 
-# In[16]:
+# In[15]:
 
 
 print("Crops in Karnataka: ")
@@ -283,7 +306,7 @@ print("Monsoon Crops")
 print(data[(data['rainfall'] > 200) & (data['humidity'] > 50)]['label'].unique())
 
 
-# In[17]:
+# In[16]:
 
 
 x = data.loc[:, ['N','P','K','temperature','ph','humidity','rainfall']].values
@@ -292,7 +315,7 @@ x_data  = pd.DataFrame(x)
 x_data.head()
 
 
-# In[18]:
+# In[17]:
 
 
 from sklearn.cluster import KMeans
@@ -311,7 +334,7 @@ plt.ylabel('wcss')
 plt.show()
 
 
-# In[19]:
+# In[18]:
 
 
 # K Means - Clustering analysis
@@ -333,14 +356,14 @@ print('\n')
 print("4th Cluster:", z[z['cluster'] == 3]['label'].unique())
 
 
-# In[20]:
+# In[19]:
 
 
 import scipy.cluster.hierarchy as shc  
 dendro = shc.dendrogram(shc.linkage(x, method="ward"))
 
 
-# In[21]:
+# In[20]:
 
 
 #training the hierarchical model  
@@ -360,7 +383,7 @@ print("Second Cluster:", w[w['cluster'] == 2]['label'].unique())
 print("Third Cluster:", w[w['cluster'] == 3]['label'].unique())
 
 
-# In[22]:
+# In[21]:
 
 
 # Hard Clustering
@@ -387,19 +410,80 @@ d = d['label'].value_counts()
 print("Crops in Cluster 4:", list(d.index))
 
 
-# In[23]:
+# In[22]:
 
 
 data.head()
 
 
-# In[24]:
+# In[23]:
 
 
 plt.rcParams['figure.figsize'] = (15, 8)
 
 
+# In[24]:
+
+
+plt.subplot(2, 4, 1)
+sns.barplot(data['N'], data['label'])
+plt.ylabel(' ')
+plt.xlabel('Ratio of Nitrogen', fontsize = 10)
+plt.yticks(fontsize = 10)
+
+
 # In[25]:
+
+
+plt.subplot(2, 4, 1)
+sns.barplot(data['N'], data['label'])
+plt.ylabel(' ')
+plt.xlabel('Ratio of Nitrogen', fontsize = 10)
+plt.yticks(fontsize = 10)
+
+
+# In[26]:
+
+
+plt.subplot(2, 4, 4)
+sns.barplot(data['temperature'], data['label'])
+plt.ylabel(' ')
+plt.xlabel('Temperature', fontsize = 10)
+plt.yticks(fontsize = 10)
+
+
+# In[27]:
+
+
+plt.subplot(2, 4, 5)
+sns.barplot(data['humidity'], data['label'])
+plt.ylabel(' ')
+plt.xlabel('Humidity', fontsize = 10)
+plt.yticks(fontsize = 10)
+
+
+# In[28]:
+
+
+plt.subplot(2, 4, 6)
+sns.barplot(data['ph'], data['label'])
+plt.ylabel(' ')
+plt.xlabel('pH of Soil', fontsize = 10)
+plt.yticks(fontsize = 10)
+
+
+# In[29]:
+
+
+plt.subplot(2, 4, 7)
+sns.barplot(data['rainfall'], data['label'])
+plt.ylabel(' ')
+plt.xlabel('Rainfall', fontsize = 10)
+plt.yticks(fontsize = 10)
+
+
+# In[30]:
+
 
 y = data['label']
 x = data.drop(['label'], axis = 1)
@@ -408,7 +492,7 @@ print("Shape of x:", x.shape)
 print("Shape of y:", y.shape)
 
 
-# In[76]:
+# In[31]:
 
 
 from sklearn.model_selection import train_test_split
@@ -424,7 +508,7 @@ print("The Shape of y train:", y_train.shape)
 print("The Shape of y test:", y_test.shape)
 
 
-# In[77]:
+# In[32]:
 
 
 from sklearn.neighbors import KNeighborsClassifier
@@ -440,7 +524,7 @@ from sklearn.metrics import accuracy_score,confusion_matrix,roc_auc_score
 from mlxtend.plotting import plot_confusion_matrix
 
 
-# In[78]:
+# In[33]:
 
 
 def evaluator(y_test, y_pred):    
@@ -459,10 +543,8 @@ def evaluator(y_test, y_pred):
     plt.show()
 
 
-# In[79]:
+# In[ ]:
 
-
-# lets create a Predictive Models
 
 model_accuracy = pd.DataFrame(columns=['Model','Accuracy'])
 models = {
@@ -474,15 +556,27 @@ models = {
           }
 
 
+for test, clf in models.items():
+    clf.fit(x_train, y_train)
+    y_pred = clf.predict(x_test)
+    acc = accuracy_score(y_test,y_pred)
+    train_pred = clf.predict(x_train)
+    train_acc = accuracy_score(y_train, train_pred)
+    print("\n", test + ' scores')
+    print(acc)
+    print(classification_report(y_test,y_pred))
+    print(confusion_matrix(y_test,y_pred))
+    print('*' * 100,"\n")
+    model_accuracy = model_accuracy.append({'Model': test, 'Accuracy': acc, 'Train_acc': train_acc}, ignore_index=True)
 
 
-# In[ ]:
+# In[39]:
 
 
 model_accuracy.sort_values(ascending=False, by = 'Accuracy')
 
 
-# In[80]:
+# In[40]:
 
 
 from sklearn.neighbors import KNeighborsClassifier
@@ -492,7 +586,7 @@ kn_classifier = KNeighborsClassifier()
 kn_classifier.fit(x_train,y_train)
 
 
-# In[81]:
+# In[41]:
 
 
 pred_kn = kn_classifier.predict(x_test)
@@ -500,7 +594,7 @@ pred_kn = kn_classifier.predict(x_test)
 evaluator(y_test, pred_kn)
 
 
-# In[82]:
+# In[42]:
 
 
 
@@ -514,7 +608,7 @@ prediction = kn_classifier.predict((np.array([[90,
 print("The Suggested Crop for Given Climatic Condition is :", prediction)
 
 
-# In[83]:
+# In[43]:
 
 
 def pred(n,p,k,temp,hum,ph,rain):
@@ -523,13 +617,49 @@ def pred(n,p,k,temp,hum,ph,rain):
     return prediction
 
 
-# In[84]:
+# In[44]:
 
 
 pred(90,40,40,20,80,7,200)
 
 
-# In[74]:
+# In[ ]:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
